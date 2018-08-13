@@ -11,25 +11,38 @@
 
 #include <iostream>
 
-char find_difference(const std::string& s, const std::string& t)
-{
-    std::string r = s + t;
-    char ch = 0;
-    for (char c : r) {
-        ch ^= c;
+//char find_difference(const std::string& s, const std::string& t)
+//{
+//    std::string r = s + t;
+//    char ch = 0;
+//    for (char c : r) {
+//        ch ^= c;
+//    }
+//    return ch;
+//}
+//
+//int main()
+//{
+//    std::string str1{"hello"};
+//    std::string str2{"ollleh"};
+//    std::cout << "String 1: " << str1 << std::endl;
+//    std::cout << "String 2: " << str2 << std::endl;
+//    std::cout << "Diff: " << find_difference(str1, str2) << std::endl;
+//    return 0;
+//}
+//
+
+int main(){
+    std::string str1 {"helloworld"};
+    std::string str2 {"helloworl"};
+    std::string x = str1 + str2;
+    char  r = 0;
+    for(char i : x){
+        r ^= i;
     }
-    return ch;
+    std::cout << r ; 
+    // find differene in string     
+    
+    
 }
-
-int main()
-{
-    std::string str1{"hello"};
-    std::string str2{"ollleh"};
-    std::cout << "String 1: " << str1 << std::endl;
-    std::cout << "String 2: " << str2 << std::endl;
-    std::cout << "Diff: " << find_difference(str1, str2) << std::endl;
-    return 0;
-}
-
-
 
